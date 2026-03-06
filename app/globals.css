@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* =============================================
+   Autumn Palette
+   #FFD29D  Sunset    (light warm cream)
+   #FFB563  Sandy Brown (warm orange)
+   #882A0A  Sienna    (deep red-brown)
+   #918450  Olive     (earthy green)
+   ============================================= */
+:root {
+  --sienna: #882A0A;
+  --sienna-dark: #5C1A06;
+  --sienna-light: #A83A15;
+  --sandy: #FFB563;
+  --sandy-light: #FFD29D;
+  --olive: #918450;
+  --olive-light: #B0A26A;
+  --cream: #FFF8F0;
+  --cream-dark: #F5EAD8;
+  --text: #2D1106;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Sarabun', 'IBM Plex Sans Thai', sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
+}
+
+@layer utilities {
+  .font-thai {
+    font-family: 'Sarabun', 'IBM Plex Sans Thai', sans-serif;
+  }
+
+  .gradient-hero {
+    background: linear-gradient(160deg, #1E0A02 0%, #5C1A06 35%, #882A0A 65%, #6B7A40 100%);
+  }
+
+  .gradient-sienna {
+    background: linear-gradient(135deg, #882A0A 0%, #A83A15 100%);
+  }
+
+  .gradient-sandy {
+    background: linear-gradient(135deg, #E8913A 0%, #FFB563 50%, #FFD29D 100%);
+  }
+
+  .text-gradient-sandy {
+    background: linear-gradient(135deg, #E8913A 0%, #FFD29D 60%, #FFB563 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .card-cream {
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFFFFF 100%);
+    border: 1px solid rgba(136, 42, 10, 0.12);
+  }
+}
