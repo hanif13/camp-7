@@ -165,7 +165,7 @@ export default function RegisterPage() {
                                                     }`}>
                                                 <input type="radio" name="gender" value={g} required
                                                     className="sr-only" onChange={set('gender')} />
-                                                {g === 'ชาย' ? '👦' : '👧'} {g}
+                                                {g === 'ชาย' ? '👳🏻‍♀️' : ''} {g}
                                             </label>
                                         ))}
                                     </div>
