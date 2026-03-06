@@ -11,7 +11,7 @@ export default function Footer() {
                             ล้อมลูกรัก ด้วยศรัทธา
                         </h3>
                         <p className="font-semibold text-sm mb-3" style={{ color: '#FFB563' }}>
-                            ค่ายล้อมลูกรักด้วยศรัทธา
+                            Faith Code camp
                         </p>
                         <p className="text-white/50 text-sm leading-relaxed">
                             ค่ายอิสลามเพื่อเยาวชน สร้างความเข้มแข็งด้านศรัทธา ความรู้ และทักษะชีวิต
@@ -73,7 +73,7 @@ export default function Footer() {
                                 <div>
                                     <p className="text-white/50 text-sm">อมีเราะโครงการ</p>
                                     <a href="tel:0894632474" className="text-[#FFB563] text-sm font-semibold hover:text-[#FFD29D] transition-colors">
-                                        089-463-2474
+                                        091-046-3361
                                     </a>
                                 </div>
                             </div>

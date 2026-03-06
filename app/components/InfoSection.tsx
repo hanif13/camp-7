@@ -45,7 +45,7 @@ export default function InfoSection() {
                         ข้อมูลค่าย
                     </span>
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-[#3D1206] mb-3">
-                        รายละเอียดการจัดงาน
+                        รายละเอียดการจัดค่าย
                     </h2>
                     <div className="flex items-center justify-center gap-3">
                         <div className="h-px w-12 bg-[#FFB563]" />

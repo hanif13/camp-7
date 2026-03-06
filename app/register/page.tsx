@@ -130,7 +130,7 @@ export default function RegisterPage() {
                             </div>
                             <h2 className="text-white font-bold text-2xl mb-2">ลงทะเบียนสำเร็จ! 🎉</h2>
                             <p className="text-white/60 text-sm mb-6">
-                                ขอบคุณที่สมัครเข้าร่วมค่าย Faith Code Camp<br />รอติดตามประกาศรายชื่อผู้มีสิทธิ์เข้าร่วมค่ายเร็ว ๆ นี้
+                                ขอบคุณที่สมัครเข้าร่วมค่ายล้อมลูกรักด้วยศรัทธา 2569<br />รอติดตามประกาศรายชื่อผู้มีสิทธิ์เข้าร่วมค่ายเร็ว ๆ นี้
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <button onClick={() => setState('idle')}
@@ -189,13 +189,18 @@ export default function RegisterPage() {
                                 <div className="grid grid-cols-2 gap-3">
                                     <div>
                                         <label className={labelCls}>อายุ (ปี) <span className="text-red-400">*</span></label>
-                                        <input type="number" placeholder="เช่น 16" min={10} max={30} required
+                                        <input type="number" placeholder="เช่น 10" required
                                             value={form.age} onChange={set('age')} className={inputCls} />
                                     </div>
                                     <div>
-                                        <label className={labelCls}>ชั้น/ปีการศึกษา <span className="text-red-400">*</span></label>
-                                        <input type="text" placeholder="เช่น ม.5 / ปี 2" required
-                                            value={form.grade} onChange={set('grade')} className={inputCls} />
+                                        <label className={labelCls}>ชั้นเรียน <span className="text-red-400">*</span></label>
+                                        <select value={form.grade} onChange={set('grade')} required
+                                            className={inputCls} style={{ colorScheme: 'dark' }}>
+                                            <option value="" disabled className="bg-[#5C1A06]">เลือกชั้น...</option>
+                                            {['ป.1', 'ป.2', 'ป.3', 'ป.4', 'ป.5', 'ป.6'].map((g) => (
+                                                <option key={g} value={g} className="bg-[#5C1A06]">{g}</option>
+                                            ))}
+                                        </select>
                                     </div>
                                 </div>
 
