@@ -9,7 +9,7 @@ const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTO7HJ-UU
 // ================================================================
 
 // รหัสผ่านสำหรับทีมงาน (เปลี่ยนได้ตามต้องการ)
-const DASHBOARD_PIN = '1234';
+const DASHBOARD_PIN = '1415121311';
 // ================================================================
 
 type Registrant = {
