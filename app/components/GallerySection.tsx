@@ -8,9 +8,10 @@ export default function GallerySection() {
         <section id="gallery" className="py-24 px-4 sm:px-8 relative overflow-hidden"
             style={{ background: '#3D1206' }} // Sienna Dark
         >
-            {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#882A0A]/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FFB563]/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4" />
+            {/* Background Decorations (Animated) */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#882A0A]/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 animate-blob pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FFB563]/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4 animate-blob-slow pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-[#FFD29D]/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2 animate-blob pointer-events-none" style={{ animationDelay: '2.5s' }} />
 
             <div className="max-w-6xl mx-auto relative z-10">
                 {/* Header */}

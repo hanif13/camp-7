@@ -26,8 +26,12 @@ export default function SponsorSection() {
     ];
 
     return (
-        <section id="sponsors" className="py-20 px-4 sm:px-8 bg-[#FFF8F0]">
-            <div className="max-w-5xl mx-auto">
+        <section id="sponsors" className="py-20 px-4 sm:px-8 bg-[#FFF8F0] relative overflow-hidden">
+            {/* 🔴 Animated Background Blobs */}
+            <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-[#FFB563]/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3 animate-blob pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#882A0A]/5 rounded-full blur-[60px] translate-y-1/4 -translate-x-1/4 animate-blob-slow pointer-events-none" style={{ animationDelay: '1.5s' }} />
+
+            <div className="max-w-5xl mx-auto relative z-10">
                 <div className="text-center mb-14">
                     <span className="inline-block bg-[#882A0A]/10 text-[#882A0A] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
                         ผู้จัดงาน
@@ -35,9 +39,6 @@ export default function SponsorSection() {
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-[#3D1206] mb-3">
                         องค์กรผู้ร่วมจัด
                     </h2>
-                    <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
-                        ขอขอบคุณทุกองค์กรที่ร่วมกันจัดค่ายล้อมลูกรักด้วยศรัทธา ครั้งนี้
-                    </p>
                     <div className="flex items-center justify-center gap-3 mt-4">
                         <div className="h-px w-12 bg-[#FFB563]" />
                         <span className="text-[#E8913A] text-lg">🍂</span>

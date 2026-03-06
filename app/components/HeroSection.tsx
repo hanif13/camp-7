@@ -18,13 +18,13 @@ export default function HeroSection() {
                 background: 'linear-gradient(160deg, #1E0A02 0%, #5C1A06 35%, #882A0A 65%, #6B7A40 100%)',
             }}
         >
-            {/* Warm glow circles */}
-            <div className="absolute top-[-6rem] right-[-6rem] w-96 h-96 rounded-full opacity-20"
+            {/* Warm glow circles (Animated) */}
+            <div className="absolute top-[-6rem] right-[-6rem] w-[500px] h-[500px] rounded-full opacity-30 animate-blob pointer-events-none"
                 style={{ background: 'radial-gradient(circle, #FFB563 0%, transparent 70%)' }} />
-            <div className="absolute bottom-[-6rem] left-[-6rem] w-80 h-80 rounded-full opacity-15"
+            <div className="absolute bottom-[-6rem] left-[-6rem] w-[400px] h-[400px] rounded-full opacity-20 animate-blob-slow pointer-events-none"
                 style={{ background: 'radial-gradient(circle, #918450 0%, transparent 70%)' }} />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-5"
-                style={{ background: 'radial-gradient(circle, #FFD29D 0%, transparent 70%)' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full opacity-10 animate-blob pointer-events-none"
+                style={{ background: 'radial-gradient(circle, #FFD29D 0%, transparent 70%)', animationDelay: '2s' }} />
 
             {/* Leaf/star dots — fixed positions to avoid hydration mismatch */}
             {[

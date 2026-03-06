@@ -91,11 +91,16 @@ export default function RegisterPage() {
 
     return (
         <div
-            className="min-h-screen flex flex-col"
+            className="min-h-screen flex flex-col relative overflow-hidden"
             style={{ background: 'linear-gradient(160deg, #1E0A02 0%, #5C1A06 50%, #882A0A 100%)' }}
         >
+            {/* 🔴 Animated Background Blobs */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FFB563]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 animate-blob pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FFD29D]/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4 animate-blob-slow pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-[#882A0A]/20 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2 animate-blob pointer-events-none" style={{ animationDelay: '2s' }} />
+
             {/* Back */}
-            <div className="px-4 py-4 sm:px-8">
+            <div className="px-4 py-4 sm:px-8 relative z-10">
                 <Link href="/"
                     className="inline-flex items-center gap-2 text-white/50 hover:text-[#FFD29D] text-sm transition-colors">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -38,8 +38,12 @@ export default function InfoSection() {
     ];
 
     return (
-        <section id="location" className="py-20 px-4 sm:px-8 bg-[#FFF8F0]">
-            <div className="max-w-5xl mx-auto">
+        <section id="info" className="py-20 px-4 sm:px-8 bg-[#FFF8F0] relative overflow-hidden">
+            {/* 🔴 Animated Background Blobs */}
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#FFB563]/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 animate-blob-slow pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#882A0A]/5 rounded-full blur-[60px] translate-y-1/3 -translate-x-1/3 animate-blob pointer-events-none" style={{ animationDelay: '1s' }} />
+
+            <div className="max-w-5xl mx-auto relative z-10">
                 <div className="text-center mb-14">
                     <span className="inline-block bg-[#882A0A]/10 text-[#882A0A] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
                         ข้อมูลค่าย

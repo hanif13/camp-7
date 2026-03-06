@@ -48,8 +48,12 @@ export default function ScheduleSection() {
     ];
 
     return (
-        <section id="schedule" className="py-20 px-4 sm:px-8 bg-white">
-            <div className="max-w-5xl mx-auto">
+        <section id="schedule" className="py-20 px-4 sm:px-8 bg-white relative overflow-hidden">
+            {/* 🔴 Animated Background Blobs */}
+            <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-[#882A0A]/5 rounded-full blur-[100px] -translate-x-1/3 animate-blob pointer-events-none" />
+            <div className="absolute bottom-10 right-0 w-[400px] h-[400px] bg-[#FFB563]/10 rounded-full blur-[80px] translate-x-1/4 animate-blob-slow pointer-events-none" style={{ animationDelay: '2s' }} />
+
+            <div className="max-w-5xl mx-auto relative z-10">
                 <div className="text-center mb-14">
                     <span className="inline-block bg-[#FFB563]/20 text-[#882A0A] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
                         กำหนดการ
