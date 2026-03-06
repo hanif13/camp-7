@@ -113,7 +113,7 @@ export default function RegisterPage() {
                         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-[#FFB563]/30 rounded-full px-4 py-1.5 mb-5">
                             <span className="w-2 h-2 rounded-full bg-[#FFD29D] animate-pulse" />
                             <span className="text-[#FFD29D] text-xs font-semibold tracking-widest uppercase">
-                                Faith Code Camp 2569
+                                ค่ายล้อมลูกรักด้วยศรัทธา 2569
                             </span>
                         </div>
                         <h1 className="text-white font-extrabold text-3xl sm:text-4xl mb-2">ลงทะเบียนเข้าค่าย</h1>
@@ -130,7 +130,7 @@ export default function RegisterPage() {
                             </div>
                             <h2 className="text-white font-bold text-2xl mb-2">ลงทะเบียนสำเร็จ! 🎉</h2>
                             <p className="text-white/60 text-sm mb-6">
-                                ขอบคุณที่สมัครเข้าร่วมค่าย Faith Code Camp<br />เราจะติดต่อกลับภายใน 3-5 วันทำการ
+                                ขอบคุณที่สมัครเข้าร่วมค่าย Faith Code Camp<br />รอติดตามประกาศรายชื่อผู้มีสิทธิ์เข้าร่วมค่ายเร็ว ๆ นี้
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <button onClick={() => setState('idle')}

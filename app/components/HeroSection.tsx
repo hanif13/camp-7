@@ -64,7 +64,7 @@ export default function HeroSection() {
                 </div>
 
                 <p className="text-white/50 text-sm sm:text-base font-light tracking-widest mb-4 uppercase">
-                    ขอเรียนเชิญร่วมงาน
+                    ขอเชิญชวนน้อง ๆ นักเรียนชั้น ป.1 - ป.6 เข้าร่วมค่าย
                 </p>
 
                 {/* Main title */}
@@ -94,7 +94,7 @@ export default function HeroSection() {
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl px-6 py-4 mb-10 mx-auto max-w-2xl">
                     <p className="text-white/40 text-xs sm:text-sm uppercase tracking-wider mb-1">ตอน</p>
                     <h2 className="text-white font-bold text-xl sm:text-2xl md:text-3xl leading-snug">
-                        Faith Code Camp
+                        ค่ายล้อมลูกรักด้วยศรัทธา
                     </h2>
                     <p
                         className="font-semibold text-base sm:text-lg mt-1"

@@ -1,10 +1,28 @@
+import Image from 'next/image';
+
 export default function SponsorSection() {
     const orgs = [
-        { name: 'ศปง.สงขลา', short: 'ศปง.', emoji: '🕌' },
-        { name: 'A-junior สงขลา', short: 'A-Junior', emoji: '⭐' },
-        { name: 'อบน ญวค', short: 'อบน', emoji: '📚' },
-        { name: 'รร ญวค', short: 'รร.ญวค', emoji: '🏫' },
-        { name: 'AGSA สงขลา', short: 'AGSA', emoji: '🤝' },
+        {
+            name: 'ศูนย์ประสานงาน สถาบันอัสลาม ประจำจังหวัดสงขลา',
+            logo: '/logos/sppng.jpeg',
+        },
+        {
+            name: 'A-Junior : Assalam Junior',
+            logo: '/logos/a-junior.png',
+        },
+        {
+            name: 'โรงเรียนหาดใหญ่วิทยาคาร',
+            logo: '/logos/hatyai-school.jpg',
+        },
+        {
+            name: 'องค์การบริหารกิจการนักเรียน(อบน.) โรงเรียนหาดใหญ่วิทยาคาร',
+            logo: '/logos/obn.jpg',
+        },
+
+        {
+            name: 'สมาคมบัณฑิตและนักศึกษาอัสสลามสงขลา AGSA Songkhla',
+            logo: '/logos/agsa.jpg',
+        },
     ];
 
     return (
@@ -18,7 +36,7 @@ export default function SponsorSection() {
                         องค์กรผู้ร่วมจัด
                     </h2>
                     <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
-                        ขอขอบคุณทุกองค์กรที่ร่วมกันจัดค่าย Faith Code Camp ครั้งนี้
+                        ขอขอบคุณทุกองค์กรที่ร่วมกันจัดค่ายล้อมลูกรักด้วยศรัทธา ครั้งนี้
                     </p>
                     <div className="flex items-center justify-center gap-3 mt-4">
                         <div className="h-px w-12 bg-[#FFB563]" />
@@ -32,27 +50,24 @@ export default function SponsorSection() {
                     {orgs.map((org, i) => (
                         <div
                             key={i}
-                            className="group bg-white rounded-2xl p-5 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-all duration-300 border border-[#FFB563]/20 hover:border-[#FFB563]/60 hover:-translate-y-1"
+                            className="group bg-white rounded-2xl p-4 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-all duration-300 border border-[#FFB563]/20 hover:border-[#FFB563]/60 hover:-translate-y-1"
                         >
-                            {/* Logo placeholder */}
-                            <div
-                                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-3 text-3xl"
-                                style={{ background: 'linear-gradient(135deg, #FFF8F0, #FFE8C8)' }}
-                            >
-                                {org.emoji}
+                            {/* Logo */}
+                            <div className="relative w-20 h-20 mb-3 rounded-xl overflow-hidden flex-shrink-0">
+                                <Image
+                                    src={org.logo}
+                                    alt={org.name}
+                                    fill
+                                    className="object-contain p-1"
+                                    sizes="80px"
+                                />
                             </div>
-                            {/* Placeholder label */}
-                            <div className="w-full h-10 rounded-lg mb-2 flex items-center justify-center border-2 border-dashed border-[#FFB563]/40">
-                                <span className="text-[#882A0A]/30 text-[9px] font-medium">วางโลโก้</span>
-                            </div>
-                            <p className="text-[#3D1206] font-bold text-xs sm:text-sm leading-tight">{org.name}</p>
+                            <p className="text-[#3D1206] font-semibold text-[11px] sm:text-xs leading-tight">
+                                {org.name}
+                            </p>
                         </div>
                     ))}
                 </div>
-
-                <p className="text-center text-gray-400 text-xs mt-8 italic">
-                    * โลโก้จะอัปเดตในภายหลัง
-                </p>
             </div>
         </section>
     );

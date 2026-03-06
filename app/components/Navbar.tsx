@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const navLinks = [
-    { href: '#schedule', label: 'กำหนดการ' },
     { href: '#location', label: 'สถานที่' },
+    { href: '#schedule', label: 'กำหนดการ' },
     { href: '#gallery', label: 'ภาพบรรยากาศ' },
 ];
 
@@ -32,7 +32,7 @@ export default function Navbar() {
                     <span className="text-[#FFD29D] font-bold text-sm sm:text-base tracking-wide">
                         ล้อมลูกรัก ด้วยศรัทธา
                     </span>
-                    <span className="text-white/60 text-xs hidden sm:block">Faith Code Camp</span>
+                    <span className="text-white/60 text-xs hidden sm:block">ค่ายล้อมลูกรักด้วยศรัทธา</span>
                 </Link>
 
                 {/* Desktop Nav */}
