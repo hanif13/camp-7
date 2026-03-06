@@ -1,63 +1,64 @@
+import Image from 'next/image';
+
 export default function GallerySection() {
-    const placeholders = [
-        { label: 'พิธีเปิดค่าย', bg: '#5C1A06', emoji: '🌙' },
-        { label: 'กิจกรรมกลุ่ม', bg: '#882A0A', emoji: '🤝' },
-        { label: 'Workshop ศรัทธา', bg: '#6B7A40', emoji: '📖' },
-        { label: 'Night Program', bg: '#3D1206', emoji: '⭐' },
-        { label: 'Field Trip', bg: '#7A6030', emoji: '🌿' },
-        { label: 'พิธีปิดค่าย', bg: '#A83A15', emoji: '🎓' },
-    ];
+    // ใช้รูปจาก public/activity/ ทั้ง 6 รูป
+    const images = Array.from({ length: 6 }).map((_, i) => `/activity/activity${i + 1}.jpg`);
 
     return (
-        <section id="gallery" className="py-20 px-4 sm:px-8" style={{ background: '#3D1206' }}>
-            <div className="max-w-5xl mx-auto">
-                <div className="text-center mb-14">
-                    <span className="inline-block bg-white/10 text-[#FFD29D] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
-                        ภาพบรรยากาศ
+        <section id="gallery" className="py-24 px-4 sm:px-8 relative overflow-hidden"
+            style={{ background: '#3D1206' }} // Sienna Dark
+        >
+            {/* Background Decorations */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#882A0A]/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FFB563]/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4" />
+
+            <div className="max-w-6xl mx-auto relative z-10">
+                {/* Header */}
+                <div className="text-center mb-16">
+                    <span className="inline-block bg-[#FFB563]/10 text-[#FFB563] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
+                        ภาพบรรยากาศค่าย
                     </span>
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
-                        ความประทับใจจากค่าย
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4">
+                        เก็บตกความทรงจำ <span className="text-[#FFD29D]">ดีๆ</span>
                     </h2>
-                    <div className="flex items-center justify-center gap-3">
-                        <div className="h-px w-12 bg-[#FFB563]" />
-                        <span className="text-[#FFD29D] text-lg">🍂</span>
-                        <div className="h-px w-12 bg-[#FFB563]" />
-                    </div>
+                    <p className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto">
+                        ประสบการณ์ใหม่ มิตรภาพ และความรู้ที่ได้รับจากค่ายล้อมลูกรักด้วยศรัทธา
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    {placeholders.map((item, i) => (
+                {/* Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+                    {images.map((src, i) => (
                         <div
                             key={i}
-                            className="relative aspect-video rounded-2xl overflow-hidden group cursor-pointer"
-                            style={{ background: item.bg }}
+                            className={`group relative rounded-2xl md:rounded-3xl overflow-hidden bg-[#5C1A06]/50 shadow-lg border border-white/5 
+                                ${i === 0 || i === 3 ? 'md:col-span-2' : ''} 
+                                ${i === 2 ? 'row-span-2' : ''}
+                                min-h-[160px] sm:min-h-[200px] md:min-h-[280px]`}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/60" />
-                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                                <span className="text-4xl sm:text-5xl">{item.emoji}</span>
-                                <span className="text-white/80 text-xs sm:text-sm font-semibold text-center px-2">
-                                    {item.label}
-                                </span>
-                            </div>
-                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                                style={{ background: 'rgba(232,145,58,0.2)' }}>
-                                <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div className="absolute top-2 left-2 bg-black/40 backdrop-blur-sm rounded-full px-2 py-0.5">
-                                <span className="text-white/50 text-[10px]">วางรูปภาพที่นี่</span>
-                            </div>
+                            <Image
+                                src={src}
+                                alt={`ภาพกิจกรรมค่าย ${i + 1}`}
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                sizes="(max-width: 768px) 50vw, 33vw"
+                            />
+
+                            {/* Hover Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#1E0A02]/90 via-[#1E0A02]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                         </div>
                     ))}
                 </div>
 
-                <p className="text-center text-white/30 text-sm mt-6 italic">
-                    * ภาพบรรยากาศจะอัปเดตหลังจากจัดงาน
-                </p>
+                {/* Call to action (Optional but looks good) */}
+                <div className="mt-16 text-center">
+                    <p className="text-[#FFB563] font-semibold text-sm sm:text-base mb-2">
+                        ไม่อยากพลาดประสบการณ์ดีๆ แบบนี้ใช่ไหม?
+                    </p>
+                    <a href="#register" className="inline-block text-white/50 hover:text-white underline text-sm transition-colors">
+                        เลื่อนขึ้นไปสมัครเลย
+                    </a>
+                </div>
             </div>
         </section>
     );

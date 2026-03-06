@@ -3,13 +3,10 @@
 import { useState, useEffect, useCallback } from 'react';
 
 // ================================================================
-//  ⚙️ วาง URL ที่ได้จาก Google Sheets → Publish to web → CSV ที่นี่
+// ดึงค่า URL และ PIN จากไฟล์ .env.local (หรือตั้งใน Vercel Environment Variables)
 // ================================================================
-const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTO7HJ-UUgpdn8Xa6RhCcGv4Chw1Q4Ud1bjOXe4iiU0x_Xu9VEjDjMZBlpUE7BNWsVwRik-AF7-U9VX/pub?gid=0&single=true&output=csv';
-// ================================================================
-
-// รหัสผ่านสำหรับทีมงาน (เปลี่ยนได้ตามต้องการ)
-const DASHBOARD_PIN = '1415121311';
+const SHEET_CSV_URL = process.env.NEXT_PUBLIC_SHEET_CSV_URL || '';
+const DASHBOARD_PIN = process.env.NEXT_PUBLIC_DASHBOARD_PIN || '1234';
 // ================================================================
 
 type Registrant = {
